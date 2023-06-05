@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
-import { TodoCounter } from "../components/TodoCounter";
-import { TodoItem } from "../components/TodoItem";
-import { TodoSearch } from "../components/TodoSearch";
-import { TodoList } from "../components/TodoList";
-import { CreateTodoButton } from "../components/CreateTodoButton";
-import { TodoForm } from "../components/TodoForm";
-import { Modal } from "../components/Modal";
+import { TodoCounter } from "./TodoCounter";
+import { TodoItem } from "./TodoItem";
+import { TodoSearch } from "./TodoSearch";
+import { TodoList } from "./TodoList";
+import { CreateTodoButton } from "./CreateTodoButton";
+import { TodoForm } from "./TodoForm";
+import { Modal } from "./Modal";
 import { TodoContext } from "../TodoContext";
 
-function AppUI() {
+export default function AppUI() {
   const { searchedTodos, completeTodo, deleteTodo, loading, error, openModal, setOpenModal, totalTodos } =
     useContext(TodoContext);
   return (
@@ -44,4 +44,4 @@ function AppUI() {
     </>
   );
 }
-export { AppUI };
+
