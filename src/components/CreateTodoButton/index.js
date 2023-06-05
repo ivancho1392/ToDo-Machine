@@ -1,8 +1,11 @@
 import styles from './CreateTodoButton.module.css';
 
-function CreateTodoButton () {
+function CreateTodoButton (props) {
     return (
-        <button className={styles.CreateTodoButton}>+</button>
+        <button 
+        className={styles.CreateTodoButton}
+        onClick={props.onCreate}
+        >+</button>
     );
 }
 
